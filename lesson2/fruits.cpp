@@ -2,19 +2,39 @@
 #include <string>
 #include "fruits.h"
 
-std::string Fruit::getColor()
+Fruit::Fruit(std::string name, std::string color):m_name(name), m_color(color)
+{
+}
+
+std::string Fruit::getColor() const
 {
 	return m_color;
 }
 
-Apple::Apple(std::string color):m_name(std::string("apple")), m_color(color)
+Apple::Apple(std::string color):Fruit(std::string("apple"), color)
 {
 }
 
-Banana::Banana():m_name(std::string("banana")), m_color(std::string("banana"))
+std::string Apple::getName() const
+{
+	return m_name;
+}
+
+Banana::Banana():Fruit(std::string("banana"), std::string("yellow"))
 {
 }
 
-GrannySmith::GrannySmith():Apple("green")
+std::string Banana::getName() const
 {
+	return m_name;
+}
+
+GrannySmith::GrannySmith():Apple(std::string("green"))
+{
+	m_name = std::string("Granny Smith apple");
+}
+
+std::string GrannySmith::getName() const
+{
+	return m_name;
 }

@@ -40,7 +40,7 @@ Student::Student(std::string name, int age, t_sex sex, int weight, int curs):Per
 	count++;
 }
 
-void Student::printInfoStudent()
+void Student::printInfoStudent() const
 {
 	std::cout << "Name: " << m_name << "\nage = " << m_age << ", curs = " << m_curs << ".\n";
 }

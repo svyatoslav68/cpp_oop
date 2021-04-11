@@ -32,7 +32,7 @@ class Student: public Person
 		~Student();
 		static int count;
 		void setCurs(int curs);
-		void printInfoStudent();
+		void printInfoStudent() const;
 };
 
 #endif // PERSON_H

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "person.h"
+#include "fruits.h"
 
 int main(int argc, char **argv)
 {

@@ -5,29 +5,30 @@ class Fruit
 {
 	protected:
 		std::string m_name;
-		std::string m_color;
+		const std::string m_color;
 	public:
-		std::string getColor();
+		Fruit(std::string name, std::string color);
+		std::string getColor() const;
 };
 
 class Apple:public Fruit
 {
 	public:
 		Apple(std::string color);
-		void getName();
+		std::string getName() const;
 };
 
 class Banana:public Fruit
 {
 	public:
 		Banana();
-		void getName();
+		std::string getName() const;
 };
 
 class GrannySmith: public Apple
 {
 	public:
 		GrannySmith();
-		void getName();
+		std::string getName() const;
 };
 #endif
