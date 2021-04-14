@@ -14,7 +14,7 @@ class Person
 		t_sex m_sex;
 		int m_weight;
 	public:
-		//Person() = default;
+		Person() {};
 		Person(std::string name, int age, t_sex sex, int weight);
 		void setName(std::string name);
 		void addAge(int years = 1);
