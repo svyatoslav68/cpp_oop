@@ -11,7 +11,8 @@ public:
 	static const unsigned int c_field_height = 10;
 	enum direct_t {Up, Down, Left, Right};
 	Robot():m_current_place(std::make_pair(0,0)) {}
-	Robot(int x, int y):m_current_place(std::make_pair(x,y)) {}
+	Robot(const int x, const int y):m_current_place(std::make_pair(x,y)) {}
+	void setPlace(const int x, const int y) {m_current_place = std::make_pair(x,y);}
 	void Move(direct_t direct);
 	std::pair<int, int> getPlace() const {return m_current_place;}
 	//friend std::ostream &operator<<(std::ostream &os, const Robot &robot);
